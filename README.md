@@ -28,7 +28,7 @@ style | 为该图片添加 css 样式，默认为 `null`, 这个不懂可以问�
 productionID | 物品id，`type`为`full-banner`时存在， 如无 id 填 null
 productionName | 物品name，`type`为`full-banner`时存在， 如无 name 填 null
 path | 物品图片路径，`type`为`full-banner`时存在， 如无填 null
-prproductions | 物品数组，`type`为`left-right` 或 `block` 时存在，内容为`productionID`,`productionName`,`productionName`
+productions | 物品数组，`type`为`left-right` 或 `block` 时存在，内容为`productionID`,`productionName`,`productionName`
 
 完成配置文件后请按配置图片路径，更换 `./static/images/` 中的相应图片。
 
