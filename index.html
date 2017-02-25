@@ -6,16 +6,34 @@
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 	<meta content="telephone=no" name="format-detection">
 	<title>MOJOY</title>
-	<script src="http://cdn.bootcss.com/vue/2.1.10/vue.min.js"></script>
+	<!--<script src="src/vue.js"></script>-->
+	<script src="http://cdn.bootcss.com/vue/2.1.10/vue.js"></script>
+	<script src="http://cdn.bootcss.com/vue-resource/1.2.0/vue-resource.js"></script>
+
 </head>
 
 <body>
 	<div id="app">
-		
+		<div v-for="item in config" class="content">
+			<div v-if="item.type == 'full-banner'" class="full-width-banner">
+				<img class="full-width" :src="item.path" :alt="item.productionName" :id="item.productionID" v-bind:style="item.style" @click="toProPage(item.productionID)">
+			</div>
+			<div v-if="item.type == 'left-right'" class="left-right">
+				<img v-for="lrItem,index in item.productions" class="width-90 margin-top-20" v-bind:class="{ fright: index%2 == 0 }" :src="lrItem.path"
+				    :alt="lrItem.productionName" :id="lrItem.productionID" v-bind:style="item.style" @click="toProPage(lrItem.productionID)">
+			</div>
+			<div v-if="item.type == 'block'" class="block">
+				<img v-for="bItem,index in item.productions" class="width-50 margin-top-20" :src="bItem.path"
+				    :alt="bItem.productionName" :id="bItem.productionID" v-bind:style="item.style" @click="toProPage(bItem.productionID)">
+			</div>
+		</div>
+		<footer>
+			<span>Copyright &nbsp; 2017 MOJOY TEAM</span>
+		</footer>
 	</div>
 
-	<script src="src/app.js"></script>
 	<link href="src/app.css" rel="stylesheet">
+	<script src="src/app.js"></script>
 </body>
 
 </html>

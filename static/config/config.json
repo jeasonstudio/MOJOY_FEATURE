@@ -1,3 +1,105 @@
-{
-    "sss": "ssss"
-}
+[{
+    "type": "full-banner",
+    "style": null,
+    "productionID": "2",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b1.jpg"
+}, {
+    "type": "full-banner",
+    "style": "padding: 20px;width: 60%;",
+    "productionID": "2",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b2.jpg"
+}, {
+    "type": "full-banner",
+    "style": null,
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b3.jpg"
+}, {
+    "type": "left-right",
+    "style": null,
+    "productions": [{
+        "productionID": "3",
+        "productionName": "单反相机",
+        "path": "./static/images/left-right/t1.jpg"
+    }, {
+        "productionID": "4",
+        "productionName": "单反相机",
+        "path": "./static/images/left-right/t2.jpg"
+    }]
+}, {
+    "type": "block",
+    "style": "border-radius:3px;",
+    "productions": [{
+        "productionID": "5",
+        "productionName": "单反相机",
+        "path": "./static/images/block/b1.jpg"
+    }, {
+        "productionID": "6",
+        "productionName": "单反相机",
+        "path": "./static/images/block/b2.jpg"
+    }, {
+        "productionID": "7",
+        "productionName": "单反相机",
+        "path": "./static/images/block/b3.jpg"
+    }, {
+        "productionID": "8",
+        "productionName": "单反相机",
+        "path": "./static/images/block/b4.jpg"
+    }]
+}, {
+    "type": "full-banner",
+    "style": null,
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b4.jpg"
+}, {
+    "type": "full-banner",
+    "style": "width: 90%;text-align: center;padding-top: 20px;",
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b5.jpg"
+}, {
+    "type": "full-banner",
+    "style": "width: 90%;text-align: center;padding-top: 20px;",
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b6.jpg"
+}, {
+    "type": "block",
+    "style": "border-radius:3px;",
+    "productions": [{
+        "productionID": "5",
+        "productionName": "单反相机",
+        "path": "./static/images/block/m1.jpg"
+    }, {
+        "productionID": "6",
+        "productionName": "单反相机",
+        "path": "./static/images/block/m2.jpg"
+    }]
+}, {
+    "type": "full-banner",
+    "style": null,
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b7.jpg"
+}, {
+    "type": "full-banner",
+    "style": "width: 90%;text-align: center;padding-top: 20px;",
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b8.jpg"
+}, {
+    "type": "full-banner",
+    "style": "width: 90%;text-align: center;padding-top: 20px;",
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/b9.jpg"
+}, {
+    "type": "full-banner",
+    "style": "padding-top: 20px;",
+    "productionID": "99",
+    "productionName": "单反相机",
+    "path": "./static/images/full-banner/footer.jpg"
+}]

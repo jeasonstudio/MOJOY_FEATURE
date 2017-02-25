@@ -1,23 +1,25 @@
-new Vue({
+var vm = new Vue({
     el: '#app',
     data: {
-        greeting: 'Welcome to your Vue.js app!',
-        docsURL: 'http://vuejs.org/guide/',
-        gitterURL: 'https://gitter.im/vuejs/vue',
-        forumURL: 'http://forum.vuejs.org/'
+        config: [],
+        ss: "./static/images/p1.jpg"
     },
-    // ready: function () {
-    //     this.$http.get('CardboardPrice.json').then((response) => {
-    //         alert(1);
-    //     }, (response) => {
-    //         // error callback
-    //     });
-    // },
+    created: function () {
+        console.log("sssssss")
+        this.$http.get('./static/config/config.json').then((response) => {
+            console.log(vm.config)
+            vm.config = response.body
+            console.log(vm.config)
+            // this.$set('config',response.body)
+        }, (response) => {
+            alert('魔借出了点小错误')
+        });
+    },
     methods: {
-        humanizeURL: function (url) {
-            return url
-                .replace(/^https?:\/\//, '')
-                .replace(/\/$/, '')
+        toProPage: function (id) {
+            if (!id) return
+            alert(id)
+
         }
     }
 })
