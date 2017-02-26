@@ -7,7 +7,7 @@ var vm = new Vue({
         // 注册 serviceWorker
         if (navigator.serviceWorker) {
             navigator.serviceWorker.register('/MOJOY_FEATURE/service-worker.js', {
-                scope: '/'
+                scope: '/MOJOY_FEATURE/'
             }).then(function (registration) {
                 if (registration.installing) {
                     console.log('Service worker installing');
