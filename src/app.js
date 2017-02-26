@@ -6,10 +6,17 @@ var vm = new Vue({
     created: function () {
         // 注册 serviceWorker
         if (navigator.serviceWorker) {
-            navigator.serviceWorker.register('./service-worker.js', {
+            navigator.serviceWorker.register('/MOJOY_FEATURE/service-worker.js', {
                 scope: '/'
             }).then(function (registration) {
-                console.log('service worker 注册成功', registration);
+                if (registration.installing) {
+                    console.log('Service worker installing');
+                } else if (registration.waiting) {
+                    console.log('Service worker installed');
+                } else if (registration.active) {
+                    console.log('Service worker active');
+                }
+                // console.log('service worker 注册成功');
             }).catch(function (err) {
                 console.log('servcie worker 注册失败', err)
             });

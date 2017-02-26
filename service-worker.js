@@ -1,9 +1,9 @@
 var CACHE_NAME = 'Mojoy_Single_Page';
 var urlsToCache = [
-    '/index.html',
-    '/src/app.css',
-    '/src/app.js',
-    '/static/images/full-banner/b1.jpg'
+    '/MOJOY_FEATURE/index.html',
+    '/MOJOY_FEATURE/src/app.css',
+    '/MOJOY_FEATURE/src/app.js',
+    '/MOJOY_FEATURE/static/images/full-banner/b1.jpg'
 ];
 
 // 添加缓存文件数组
