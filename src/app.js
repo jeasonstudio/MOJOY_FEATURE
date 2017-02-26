@@ -4,6 +4,15 @@ var vm = new Vue({
         config: []
     },
     created: function () {
+        // 注册 serviceWorker
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+                console.log('service worker 注册成功');
+            }).catch(function (err) {
+                console.log('servcie worker 注册失败')
+            });
+        }
+        // 获取配置文件
         this.$http.get('./static/config/config.json').then((response) => {
             vm.config = response.body
             console.log(vm.config)

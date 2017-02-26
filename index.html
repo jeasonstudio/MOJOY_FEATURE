@@ -23,8 +23,8 @@
 				    :alt="lrItem.productionName" :id="lrItem.productionID" v-bind:style="item.style" @click="toProPage(lrItem.productionID,lrItem.productionName)">
 			</div>
 			<div v-if="item.type == 'block'" class="block">
-				<img v-for="bItem,index in item.productions" class="width-50 margin-top-20" :src="bItem.path"
-				    :alt="bItem.productionName" :id="bItem.productionID" v-bind:style="item.style" @click="toProPage(bItem.productionID,bItem.productionName)">
+				<img v-for="bItem,index in item.productions" class="width-50 margin-top-20" :src="bItem.path" :alt="bItem.productionName"
+				    :id="bItem.productionID" v-bind:style="item.style" @click="toProPage(bItem.productionID,bItem.productionName)">
 			</div>
 		</div>
 		<footer>
