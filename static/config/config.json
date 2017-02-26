@@ -1,7 +1,7 @@
 [{
     "type": "full-banner",
     "style": null,
-    "productionID": "2",
+    "productionID": null,
     "productionName": "单反相机",
     "path": "./static/images/full-banner/b1.jpg"
 }, {
