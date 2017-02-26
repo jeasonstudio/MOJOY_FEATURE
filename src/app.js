@@ -6,7 +6,7 @@ var vm = new Vue({
     created: function () {
         // 注册 serviceWorker
         if (navigator.serviceWorker) {
-            navigator.serviceWorker.register('../service-worker.js', {
+            navigator.serviceWorker.register('./service-worker.js', {
                 scope: '/'
             }).then(function (registration) {
                 console.log('service worker 注册成功', registration);
