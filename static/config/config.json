@@ -7,14 +7,14 @@
 }, {
     "type": "full-banner",
     "style": "padding: 20px;width: 60%;",
-    "productionID": "2",
-    "productionName": "单反相机",
+    "productionID": null,
+    "productionName": null,
     "path": "./static/images/full-banner/b2.jpg"
 }, {
     "type": "full-banner",
     "style": null,
-    "productionID": "99",
-    "productionName": "单反相机",
+    "productionID": null,
+    "productionName": null,
     "path": "./static/images/full-banner/b3.jpg"
 }, {
     "type": "left-right",
