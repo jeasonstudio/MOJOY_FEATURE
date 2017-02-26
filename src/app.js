@@ -6,10 +6,10 @@ var vm = new Vue({
     created: function () {
         // 注册 serviceWorker
         if (navigator.serviceWorker) {
-            navigator.serviceWorker.register('service-worker.js').then(function (registration) {
-                console.log('service worker 注册成功');
+            navigator.serviceWorker.register('./src/service-worker.js').then(function (registration) {
+                console.log('service worker 注册成功', registration);
             }).catch(function (err) {
-                console.log('servcie worker 注册失败')
+                console.log('servcie worker 注册失败', err)
             });
         }
         // 获取配置文件
