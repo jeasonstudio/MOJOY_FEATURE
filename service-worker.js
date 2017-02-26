@@ -1,6 +1,6 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-    '/index.html',
+    '/',
     '/src/app.css',
     '/src/app.js'
     // '/static/images/**/*.jpg'
