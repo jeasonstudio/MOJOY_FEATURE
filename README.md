@@ -5,6 +5,10 @@
 
 安装 node ,根目录下执行 `npm start` ,浏览器打开 `http://localhost:3000/index.html`
 
+注册了 service-worker 请见 service-worker.js 
+
+首次加载 778kb ,二次加载 372b
+
 ## 配置
 
 配置文件在 `./static/config/config.json`
