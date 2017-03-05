@@ -36,27 +36,23 @@ var vm = new Vue({
             var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-            if (isAndroid && !isiOS) {
-                alert('test：Android:' + (id ? ('物品 id：' + id) : '') + (name ? (',物品名称：' + name) : name))
+            // alert('test：Android:' + (id ? ('物品 id：' + id) : '') + (name ? (',物品名称：' + name) : name))
+            if (id) {
+                Android.findProduct(string(id));
+                window.NativeBridge('fetchMessage', {
+                    'type': 1,
+                    'id': id
+                });
+            } else if (name) {
                 Android.search(name);
-            } else if (isiOS && !isAndroid) {
-                alert('test：ios:' + (id ? ('物品 id：' + id) : '') + (name ? (',物品名称：' + name) : name))
-                if (id) {
-                    window.NativeBridge('fetchMessage', {
-                        'type': 1,
-                        'id': id
-                    });
-                } else if (name) {
-                    window.NativeBridge('fetchMessage', {
-                        'type': 2,
-                        'key': name
-                    });
-                } else {
-                    console.log('Some Error')
-                }
+                window.NativeBridge('fetchMessage', {
+                    'type': 2,
+                    'key': name
+                });
             } else {
-                console.log('Some Error:Not Android or Ios')
+                console.log('Some Error')
             }
+
         }
     }
 })

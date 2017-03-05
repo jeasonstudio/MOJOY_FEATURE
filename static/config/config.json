@@ -27,6 +27,10 @@
         "productionID": "4",
         "productionName": "单反相机",
         "path": "./static/images/left-right/t2.jpg"
+    }, {
+        "productionID": "4",
+        "productionName": "单反相机",
+        "path": "./static/images/left-right/t2.jpg"
     }]
 }, {
     "type": "block",
