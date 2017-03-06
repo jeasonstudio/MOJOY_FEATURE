@@ -2,7 +2,7 @@
     "type": "full-banner",
     "style": null,
     "productionID": null,
-    "productionName": "单反相机",
+    "productionName": null,
     "path": "./static/images/full-banner/b1.jpg"
 }, {
     "type": "full-banner",
@@ -36,19 +36,19 @@
     "type": "block",
     "style": "border-radius:3px;",
     "productions": [{
-        "productionID": "5",
+        "productionID": null,
         "productionName": "单反相机",
         "path": "./static/images/block/b1.jpg"
     }, {
-        "productionID": "6",
+        "productionID": null,
         "productionName": "单反相机",
         "path": "./static/images/block/b2.jpg"
     }, {
-        "productionID": "7",
+        "productionID": null,
         "productionName": "单反相机",
         "path": "./static/images/block/b3.jpg"
     }, {
-        "productionID": "8",
+        "productionID": null,
         "productionName": "单反相机",
         "path": "./static/images/block/b4.jpg"
     }]
