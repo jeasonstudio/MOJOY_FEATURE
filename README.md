@@ -9,6 +9,8 @@
 
 首次加载 778kb ,二次加载 372b
 
+测试页面：[https://jeasonstudio.github.io/MOJOY_FEATURE/](https://jeasonstudio.github.io/MOJOY_FEATURE/)
+
 ## 配置
 
 配置文件在 `./static/config/config.json`
