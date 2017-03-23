@@ -38,16 +38,11 @@ var vm = new Vue({
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
             // alert('test：Android:' + (type ? ('物品 type' + type) : '') + (param ? (',物品名称：' + param) : param))
 
-            // console.log(param)            
-            // Android.fetchMessage(type, param);
-            // debugger
+            param.type = type
             if (isAndroid && !isiOS) {
-                Android.fetchMessage(type, JSON.stringify(param));
+                Android.fetchMessage(JSON.stringify(param));
             } else if (isiOS && !isAndroid) {
-                window.NativeBridge('fetchMessage', {
-                    'type': type,
-                    'id': param
-                });
+                window.NativeBridge('fetchMessage',param);
             } else {
                 console.log("ERROR")
             }
