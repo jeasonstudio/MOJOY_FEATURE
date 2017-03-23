@@ -16,15 +16,15 @@
 	<div id="app">
 		<div v-for="item in config" class="content">
 			<div v-if="item.type == 'full-banner'" class="full-width-banner">
-				<img class="full-width" :src="item.path" :alt="item.productionName" :id="item.productionID" v-bind:style="item.style" @click="toProPage(item.productionID,item.productionName)">
+				<img class="full-width" :src="item.path" :alt="item.productionParam" :id="item.productionType" v-bind:style="item.style" @click="toProPage(item.productionType,item.productionParam)">
 			</div>
 			<div v-if="item.type == 'left-right'" class="left-right">
 				<img v-for="lrItem,index in item.productions" class="width-90 margin-top-20" v-bind:class="{ fright: index%2 == 0 }" :src="lrItem.path"
-				    :alt="lrItem.productionName" :id="lrItem.productionID" v-bind:style="item.style" @click="toProPage(lrItem.productionID,lrItem.productionName)">
+				    :alt="lrItem.productionParam" :id="lrItem.productionType" v-bind:style="item.style" @click="toProPage(lrItem.productionType,lrItem.productionParam)">
 			</div>
 			<div v-if="item.type == 'block'" class="block">
-				<img v-for="bItem,index in item.productions" class="width-50 margin-top-20" :src="bItem.path" :alt="bItem.productionName"
-				    :id="bItem.productionID" v-bind:style="item.style" @click="toProPage(bItem.productionID,bItem.productionName)">
+				<img v-for="bItem,index in item.productions" class="width-50 margin-top-20" :src="bItem.path" :alt="bItem.productionParam"
+				    :id="bItem.productionType" v-bind:style="item.style" @click="toProPage(bItem.productionType,bItem.productionParam)">
 			</div>
 		</div>
 		<footer>

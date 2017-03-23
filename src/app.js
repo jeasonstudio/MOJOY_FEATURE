@@ -30,39 +30,27 @@ var vm = new Vue({
         });
     },
     methods: {
-        toProPage: function (id, name) {
-            if (!id && !name) return
+        toProPage: function (type, param) {
+            if (!type || !param) return
 
             var u = navigator.userAgent;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-            // alert('test：Android:' + (id ? ('物品 id：' + id) : '') + (name ? (',物品名称：' + name) : name))
-            if (id) {
-                if (isAndroid && !isiOS) {
-                    Android.findProduct(string(id));
-                } else if (isiOS && !isAndroid) {
-                    window.NativeBridge('fetchMessage', {
-                        'type': 1,
-                        'id': id
-                    });
-                } else {
-                    console.log("ERROR")
-                }
-            } else if (name) {
-                if (isAndroid && !isiOS) {
-                    Android.search(name);
-                } else if (isiOS && !isAndroid) {
-                    window.NativeBridge('fetchMessage', {
-                        'type': 2,
-                        'key': name
-                    });
-                } else {
-                    console.log("ERROR")
-                }
-            } else {
-                console.log('Some Error')
-            }
+            // alert('test：Android:' + (type ? ('物品 type' + type) : '') + (param ? (',物品名称：' + param) : param))
 
+            // console.log(param)            
+            // Android.fetchMessage(type, param);
+            // debugger
+            if (isAndroid && !isiOS) {
+                Android.fetchMessage(type, JSON.stringify(param));
+            } else if (isiOS && !isAndroid) {
+                window.NativeBridge('fetchMessage', {
+                    'type': type,
+                    'id': param
+                });
+            } else {
+                console.log("ERROR")
+            }
         }
     }
 })

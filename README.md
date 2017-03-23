@@ -31,8 +31,8 @@ block | 网格状分布图片
 --- | ---
 type | `full-banner`,`left-right`,`block`中的一种，请看上表
 style | 为该图片添加 css 样式，默认为 `null`, 这个不懂可以问下我
-productionID | 物品id，`type`为`full-banner`时存在， 如无 id 填 null
-productionName | 物品name，`type`为`full-banner`时存在， 如无 name 填 null
+productionType | 跳转到app内那个页面，填一个 int 型的值，`type`为`full-banner`时存在， 若希望点击没反应请填 null
+productionParam | 跳转参数，应该填一个对象，比如：{"id":5}，`type`为`full-banner`时存在，若希望点击没反应请填 null
 path | 物品图片路径，`type`为`full-banner`时存在， 如无填 null
 productions | 物品数组，`type`为`left-right` 或 `block` 时存在，内容为`productionID`,`productionName`,`productionName`
 
